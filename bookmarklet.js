@@ -1,13 +1,6 @@
-var clapping = false;
+var clapping = true;
 var timer;
 var clapper = document.querySelector(".sc-dmejso.blBwFD");
-
-var btn = document.createElement("BUTTON");
-btn.innerHTML = "Start Clapping";
-btn.onclick = toggleClapingState;
-//btn.id = "ToggleClap"; //For Debug Use
-btn.style = "position: absolute;top: 0;z-index: 1000;"
-document.body.appendChild(btn);
 
 function toggleClapingState() {
     if (clapping) {
@@ -18,5 +11,13 @@ function toggleClapingState() {
         timer = setInterval(function() {clapper.click()}, 1)
     }
 
-    clapping = !clapping;
+    clapping = !clapping;
 }
+
+var btn = document.createElement("BUTTON");
+btn.innerHTML = "Stop Clapping";
+btn.onclick = toggleClapingState;
+//btn.id = "ToggleClap"; //For Debug Use
+btn.style = "position: absolute;top: 0;z-index: 1000;"
+document.body.appendChild(btn);
+setInterval(function() {clapper.click()}, 1)
