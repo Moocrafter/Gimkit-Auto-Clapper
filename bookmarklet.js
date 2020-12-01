@@ -1,15 +1,15 @@
-var clapping = true;
+var clapping = false;
 var timer;
-var clapper = document.querySelector("#content DIV .sc-gyfYDX.cuxPcJ .sc-jZIEzD.eiBiTJ .sc-bRbqnn.fPQnYY DIV .sc-beKmYL.bEOmlE.fade-router-enter-done .sc-ilGAqu.frbouh.animated.zoomInDown .sc-fXchrD.jghgOw .sc-NOpvV.hFqjJJ DIV");
+var clapper = document.querySelector(".sc-dmejso.blBwFD");
 
 var btn = document.createElement("BUTTON");
-btn.innerHTML = "Stop";
-btn.addEventListener("click", toggleClapingState());
+btn.innerHTML = "Start Clapping";
+btn.onclick = toggleClapingState;
 //btn.id = "ToggleClap"; //For Debug Use
 btn.style = "position: absolute;top: 0;z-index: 1000;"
 document.body.appendChild(btn);
 
-const toggleClapingState = function() {
+function toggleClapingState() {
     if (clapping) {
         btn.innerHTML = "Start Clapping";
         clearInterval(timer);
