@@ -15,7 +15,7 @@ const toggleClapingState = function() {
 }
 
 var btn = document.createElement("BUTTON");
-btn.innerHTML = "Stop";
+btn.innerHTML = "Stop Clapping";
 btn.addEventListener("click", toggleClapingState);
 //btn.id = "ToggleClap"; //For Debug Use
 btn.style = "position: absolute;top: 0;z-index: 1000;"
