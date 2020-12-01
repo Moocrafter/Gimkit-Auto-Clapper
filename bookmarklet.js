@@ -11,12 +11,12 @@ function toggleClapingState() {
         timer = setInterval(function() {clapper.click()}, 1)
     }
 
-    clapping = !clapping;
+    clapping = !clapping;
 }
 
 var btn = document.createElement("BUTTON");
 btn.innerHTML = "Stop Clapping";
-btn.onclick = toggleClapingState;
+btn.addEventListener("click", toggleClapingState);
 //btn.id = "ToggleClap"; //For Debug Use
 btn.style = "position: absolute;top: 0;z-index: 1000;"
 document.body.appendChild(btn);
