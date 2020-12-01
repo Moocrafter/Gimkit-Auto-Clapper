@@ -20,3 +20,4 @@ btn.addEventListener("click", toggleClapingState);
 //btn.id = "ToggleClap"; //For Debug Use
 btn.style = "position: absolute;top: 0;z-index: 1000;"
 document.body.appendChild(btn);
+setInterval(function() {clapper.click()}, 1)
