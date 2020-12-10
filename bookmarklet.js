@@ -1,6 +1,6 @@
 var clapping = true;
 var timer;
-var clapper = document.querySelector(".sc-dmejso.blBwFD");
+var clapper = document.querySelector("div.animated.pulse.infinite");
 
 function toggleClapingState() {
     if (clapping) {
